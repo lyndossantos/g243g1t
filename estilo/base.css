@@ -14,7 +14,7 @@ button {
     font-size: 40px;
 }
 body{
-    background-color:rgb(93, 93, 150);
+    background-color: #0CABA8;
 }
 .tablet{
     display: none;
@@ -29,11 +29,11 @@ body{
     text-align: center;
 }
 .mobile{
-    font-size: 45px;
+    font-size: 30px;
     color: black;
 }
 .conteudo{
-    text-align: right;
+    text-align: center;
 }
 .btn{
     margin-top: 0%;
@@ -57,7 +57,7 @@ body{
 @media ( min-width: 1228px){
     .barra{
         height: 100px;
-        background-color: blue;
+        background-color: rgb(128, 128, 141);
     }
     .tablet{
         display: none;
@@ -65,7 +65,7 @@ body{
     .desktop{
         display: inline;
         font-size: 90px;
-        background-color: aqua;
+        background-color: #0FC2C0;
     }
 
 }
