@@ -26,5 +26,52 @@ function abrir(num){
       document.getElementById("aba5").disabled = true;
       document.getElementById("a5").style.display = "block";
      }
-
 }
+function hora_atual(){
+   const d = new Date();
+   let h = d.getHours();
+   let m = d.getMinutes();
+   let s = d.getSeconds();
+   if(s < 10){
+      s ="0" + s;
+   }
+   if(h < 10){
+      h ="0" + h;
+   }
+   if(m < 10){
+      m ="0" + m;
+   }
+   document.getElementById("h").innerHTML = h + ":" + m + ":" + s;
+}
+setInterval(() => {
+   hora_atual();
+}, 1000);
+
+function contador(){
+   if(inicio == fim){
+      contar.clearInterval();
+   }else{
+      inicio++;
+      document.getElementById("valor").innerHTML = inicio;
+   }
+}
+
+
+let contar = null;
+let inicio = 0;
+let fim = 0;
+
+function iniciarContagem(){
+   inicio = document.getElementById("inicio").value;
+   fim = document.getElementById("fim").value;
+   contar = setInterval(() => {
+       contador();
+   }, 1000);
+}
+
+
+
+
+
+
+
