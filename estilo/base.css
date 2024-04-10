@@ -1,4 +1,11 @@
-
+.desp{
+    border: none;
+    width: 50px;
+    color: black;
+    background-color: #347792;
+    font-size: 30px;
+   
+}
 .conteudo{
     width: 100%;
     text-align: center;

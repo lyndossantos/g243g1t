@@ -17,6 +17,10 @@ function abrir(num){
      if(num == "3"){
       document.getElementById("aba3").disabled = true;
       document.getElementById("a3").style.display = "block";
+      pegar_hora();
+      document.getElementById("hd").value = hd;
+      document.getElementById("md").value = md;
+      document.getElementById("sd").value = sd;
      }
      if(num == "4"){
       document.getElementById("aba4").disabled = true;
@@ -69,6 +73,31 @@ function iniciarContagem(){
    }, 1000);
 }
 
+let hd = 0;
+let md = 0; 
+let sm = 0;
+let alarme = null;
+function pegar_hora(){
+   let d = new Date();
+   hd = d.getHours();
+   md = d.getMinutes();
+   sm = d.getSeconds();
+}
+function ativar_alarme (){
+   let d = new Date();
+   if(hd==d.getHours() && md==d.getMinutes() && sd==d.getSeconds()){
+      clearInterval(alarme);
+      alert("Alarme... Voltando para Aba3");
+      abrir(3);
+   }
+}
+function ligar_alarme (){
+   hd = document.getElementById("hd").value;
+   md = document.getElementById("md").value;
+   sd = document.getElementById("sd").value;
+   alarme = setInterval (ativar_alarme, 1000);
+
+}
 
 
 
