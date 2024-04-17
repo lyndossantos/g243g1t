@@ -75,13 +75,13 @@ function iniciarContagem(){
 
 let hd = 0;
 let md = 0; 
-let sm = 0;
+let sd = 0;
 let alarme = null;
 function pegar_hora(){
    let d = new Date();
    hd = d.getHours();
    md = d.getMinutes();
-   sm = d.getSeconds();
+   sd = d.getSeconds();
 }
 function ativar_alarme (){
    let d = new Date();
